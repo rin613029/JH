@@ -190,7 +190,7 @@ function ScreenArrow.OnBreathe()
 						return obj:Free()
 					end
 				elseif obj.szClass == "NPC" or obj.szClass == "DOODAD" then
-					-- txt = obj.txt or txt
+					txt = obj.txt or txt
 				elseif obj.szClass == "TIME" then
 					if (GetTime() - obj.nNow) / 1000 > 3 then
 						return obj:Free()
@@ -304,11 +304,6 @@ end
 
 function SA:ctor(szClass, dwID, tArgs)
 	local dwType, object = ScreenArrow.GetObject(szClass, dwID)
-	if not JH.bDebugClient and not JH.IsInDungeon(true) then
-		if dwType == TARGET.NPC and object.bDialogFlag and not SPECIAL_NPC[object.dwTemplateID] then
-			return
-		end
-	end
 	local oo = {}
 	setmetatable(oo, self)
 	local ui      = HANDLE:New()

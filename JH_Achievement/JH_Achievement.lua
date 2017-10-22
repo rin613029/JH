@@ -166,7 +166,7 @@ function JH_Achievement.OnItemLButtonClick()
 	local szName = this:GetName()
 	if szName == "Text_Link" then
 		local frame = this:GetRoot()
-		OpenBrowse(ACHI_ROOT_URL .. "/jx3/wiki/details/" .. frame.dwAchievement)
+		OpenBrowser(ACHI_ROOT_URL .. "/jx3/wiki/details/" .. frame.dwAchievement)
 		if not frame.bEdit then
 			Achievement.ClosePanel()
 		end
@@ -313,7 +313,7 @@ end
 function Achievement.GetLinkScript(szLink)
 	return [[
 		this.OnItemLButtonClick = function()
-			OpenBrowse(]] .. EncodeComponentsString(szLink) .. [[)
+			OpenBrowser(]] .. EncodeComponentsString(szLink) .. [[)
 		end
 		this.OnItemMouseEnter = function()
 			this:SetFontColor(255, 0, 0)

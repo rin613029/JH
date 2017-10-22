@@ -95,7 +95,7 @@ function DBM_RemoteRequest.OnFrameCreate()
 end
 
 function W.Login()
-	return OpenBrowse("http://jx3-plugin.kingsoft.com/DBM")
+	return OpenBrowser("http://jx3-plugin.kingsoft.com/DBM")
 	--[[
 	GetUserInput(_L["Enter User ID"], function(szNum)
 		if not tonumber(szNum) then
@@ -161,7 +161,7 @@ end
 
 function W.CallMyData()
 	W.Loading()
-	local szCacheTime = FormatTime("%Y.%m.%d.%H.%M", GetCurrentTime()) -- µÃÒæÓÚIE»º´æ 1·ÖÖÓÒ»´Î
+	local szCacheTime = FormatTime("%Y.%m.%d.%H.%M", GetCurrentTime()) -- 得益于IE缓存 1分钟一次
 	-- JH.RemoteRequest(W.szUser .. "?_" .. szCacheTime .. "&lang=" .. CLIENT_LANG, function(szTitle, szDoc)
 	-- 	local result, err = JH.JsonDecode(JH.UrlDecode(szDoc))
 	-- 	if err then
@@ -308,7 +308,7 @@ function W.AppendItem(data, k)
 					url = "http://" .. data.url
 				end
 				--]]
-				OpenBrowse(url)
+				OpenBrowser(url)
 			end
 			if data.url then
 				btn2:Lookup("", "Text_Default2"):SetText(_L["details"])
