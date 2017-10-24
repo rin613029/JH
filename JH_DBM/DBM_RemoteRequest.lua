@@ -1,7 +1,7 @@
 -- @Author: Webster
 -- @Date:   2015-01-21 15:21:19
 -- @Last Modified by:   WilliamChan
--- @Last Modified time: 2017-10-12 10:45:43
+-- @Last Modified time: 2017-10-22 15:47:26
 local _L = JH.LoadLangPack
 
 DBM_RemoteRequest = {
