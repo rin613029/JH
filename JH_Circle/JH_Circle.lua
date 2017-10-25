@@ -20,7 +20,7 @@ local CIRCLE_ALPHA_STEP   = 2.5
 local CIRCLE_MAX_RADIUS   = 30   -- 最大的半径
 local CIRCLE_LINE_ALPHA   = 45   -- 线和边框最大透明度
 local CIRCLE_ALPHA        = 30   -- 圈圈透明度
-local CIRCLE_MAX_CIRCLE   = 1
+local CIRCLE_MAX_CIRCLE   = 2
 local CIRCLE_RESERT_DRAW  = false -- 全局重绘
 local CIRCLE_DEFAULT_DATA = { bEnable = true, nAngle = 80, nRadius = 4, col = { 0, 255, 0 }, bBorder = true }
 local CIRCLE_PANEL_ANCHOR = { s = "CENTER", r = "CENTER", x = 0, y = 0 }
