@@ -272,7 +272,7 @@ end
 -- 设置倒计时的名称和时间 用于动态改变分段倒计时
 function ST:SetInfo(tTime, nIcon)
 	if tTime.szName then
-		self.ui.txt:SetText(wstring.sub(tTime.szName, 1, 7))
+		self.ui.txt:SetText(wstring.sub(tTime.szName, 1, 25))
 	end
 	if tTime.nTime then
 		self.ui:SetUserData(math.floor(tTime.nTime))
